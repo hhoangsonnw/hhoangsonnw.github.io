@@ -1,0 +1,34 @@
+{
+  "name": "cybersecurity-portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run content:sync && vite --host 0.0.0.0",
+    "build": "node scripts/sync-content.mjs --no-dist && vite build && node scripts/copy-404.mjs",
+    "preview": "vite preview --host 0.0.0.0",
+    "content:sync": "node scripts/sync-content.mjs",
+    "content:add": "node scripts/add-post.mjs"
+  },
+  "dependencies": {
+    "framer-motion": "^11.18.2",
+    "highlight.js": "^11.11.1",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet-async": "^2.0.5",
+    "react-markdown": "^9.0.3",
+    "react-router-dom": "^6.30.1",
+    "rehype-slug": "^6.0.0",
+    "remark-gfm": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.4.21",
+    "gray-matter": "^4.0.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.4.3"
+  }
+}

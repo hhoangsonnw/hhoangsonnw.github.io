@@ -1,0 +1,604 @@
+{
+  "generatedAt": "2026-06-13T08:28:00.291Z",
+  "site": {
+    "title": "HHOANGSONNW",
+    "description": "Personal cybersecurity portfolio with CTF write-ups, research notes, and reproducible security labs.",
+    "url": "https://hhoangsonnw.github.io"
+  },
+  "branches": [
+    {
+      "id": "htb",
+      "name": "HTB",
+      "directory": "HTB",
+      "slug": "htb",
+      "route": "/htb",
+      "description": "Hack The Box machines, Sherlocks, challenges, and lab notes.",
+      "subBranches": [
+        {
+          "id": "htb-sherlocks",
+          "name": "Sherlocks",
+          "directory": "Sherlocks",
+          "slug": "sherlocks",
+          "route": "/htb/sherlocks",
+          "description": "HTB Sherlocks investigations, blue-team cases, and forensic challenge write-ups."
+        },
+        {
+          "id": "htb-challenges",
+          "name": "Challenges",
+          "directory": "Challenges",
+          "slug": "challenges",
+          "route": "/htb/challenges",
+          "description": "HTB challenge write-ups across web, crypto, pwn, reversing, forensics, and misc."
+        }
+      ]
+    },
+    {
+      "id": "cyberdefenders",
+      "name": "CyberDefenders",
+      "directory": "CyberDefenders",
+      "slug": "cyberdefenders",
+      "route": "/cyberdefenders",
+      "description": "CyberDefenders incident response, forensics, malware, and blue-team investigations."
+    },
+    {
+      "id": "ctf-competitions",
+      "name": "CTF competitions",
+      "directory": "CTF competitions",
+      "slug": "ctf-competitions",
+      "route": "/ctf-competitions",
+      "description": "Competition write-ups from jeopardy CTFs, attack-defense events, and timed challenges."
+    }
+  ],
+  "posts": [
+    {
+      "slug": "spotted-in-the-wild",
+      "title": "SpottedInTheWild",
+      "description": "Reconstruct an attack timeline by analyzing disk images, event logs, and malicious scripts to identify initial access, persistence, and data exfiltration techniques.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "forensics",
+        "incident-response",
+        "malware",
+        "windows",
+        "winrar"
+      ],
+      "category": "forensics",
+      "collection": "cyberdefenders",
+      "branch": {
+        "id": "cyberdefenders",
+        "name": "CyberDefenders",
+        "directory": "CyberDefenders",
+        "slug": "cyberdefenders",
+        "route": "/cyberdefenders"
+      },
+      "type": "writeup",
+      "difficulty": "hard",
+      "featured": false,
+      "sourcePath": "content/CyberDefenders/SpottedInTheWild/WRITEUP.md",
+      "contentPath": "/content/CyberDefenders/SpottedInTheWild/WRITEUP.md",
+      "assetBasePath": "/content/CyberDefenders/SpottedInTheWild",
+      "url": "/cyberdefenders/spotted-in-the-wild",
+      "readingTime": {
+        "minutes": 13,
+        "words": 2704,
+        "text": "13 min read"
+      }
+    },
+    {
+      "slug": "bluesky-ransomware",
+      "title": "BlueSky Ransomware",
+      "description": "Reconstruct a BlueSky ransomware attack by analyzing network traffic, decoding PowerShell scripts, and examining persistence mechanisms to identify attacker tactics and IOCs.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "forensics",
+        "ransomware",
+        "malware",
+        "windows",
+        "sql-server"
+      ],
+      "category": "forensics",
+      "collection": "cyberdefenders",
+      "branch": {
+        "id": "cyberdefenders",
+        "name": "CyberDefenders",
+        "directory": "CyberDefenders",
+        "slug": "cyberdefenders",
+        "route": "/cyberdefenders"
+      },
+      "type": "writeup",
+      "difficulty": "medium",
+      "featured": false,
+      "sourcePath": "content/CyberDefenders/bluesky-ransomware/WRITEUP.md",
+      "contentPath": "/content/CyberDefenders/bluesky-ransomware/WRITEUP.md",
+      "assetBasePath": "/content/CyberDefenders/bluesky-ransomware",
+      "url": "/cyberdefenders/bluesky-ransomware",
+      "readingTime": {
+        "minutes": 16,
+        "words": 3339,
+        "text": "16 min read"
+      }
+    },
+    {
+      "slug": "data-siege",
+      "title": "Data Siege",
+      "description": "Hack The Box challenge write-up for Data Siege.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "challenge",
+        "forensics"
+      ],
+      "category": "Challenges",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-challenges",
+        "name": "Challenges",
+        "directory": "Challenges",
+        "slug": "challenges",
+        "route": "/htb/challenges"
+      },
+      "type": "writeup",
+      "difficulty": "medium",
+      "featured": false,
+      "sourcePath": "content/HTB/Challenges/Data Siege/WRITEUP.md",
+      "contentPath": "/content/HTB/Challenges/Data Siege/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Challenges/Data Siege",
+      "url": "/htb/challenges/data-siege",
+      "readingTime": {
+        "minutes": 5,
+        "words": 894,
+        "text": "5 min read"
+      }
+    },
+    {
+      "slug": "deadly-athropod",
+      "title": "Deadly Arthropod",
+      "description": "Hack The Box challenge write-up for Deadly Arthropod.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "challenge",
+        "forensics"
+      ],
+      "category": "Challenges",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-challenges",
+        "name": "Challenges",
+        "directory": "Challenges",
+        "slug": "challenges",
+        "route": "/htb/challenges"
+      },
+      "type": "writeup",
+      "difficulty": "medium",
+      "featured": false,
+      "sourcePath": "content/HTB/Challenges/Deadly Athropod/WRITEUP.md",
+      "contentPath": "/content/HTB/Challenges/Deadly Athropod/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Challenges/Deadly Athropod",
+      "url": "/htb/challenges/deadly-athropod",
+      "readingTime": {
+        "minutes": 4,
+        "words": 865,
+        "text": "4 min read"
+      }
+    },
+    {
+      "slug": "interstellar-c2",
+      "title": "Interstellar C2",
+      "description": "Hack The Box challenge write-up for Interstellar C2.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "challenge",
+        "forensics"
+      ],
+      "category": "Challenges",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-challenges",
+        "name": "Challenges",
+        "directory": "Challenges",
+        "slug": "challenges",
+        "route": "/htb/challenges"
+      },
+      "type": "writeup",
+      "difficulty": "medium",
+      "featured": false,
+      "sourcePath": "content/HTB/Challenges/Interstellar C2/WRITEUP.md",
+      "contentPath": "/content/HTB/Challenges/Interstellar C2/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Challenges/Interstellar C2",
+      "url": "/htb/challenges/interstellar-c2",
+      "readingTime": {
+        "minutes": 11,
+        "words": 2259,
+        "text": "11 min read"
+      }
+    },
+    {
+      "slug": "phreaky",
+      "title": "Phreaky",
+      "description": "Hack The Box challenge write-up for Phreaky.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "challenge",
+        "forensics"
+      ],
+      "category": "Challenges",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-challenges",
+        "name": "Challenges",
+        "directory": "Challenges",
+        "slug": "challenges",
+        "route": "/htb/challenges"
+      },
+      "type": "writeup",
+      "difficulty": "medium",
+      "featured": false,
+      "sourcePath": "content/HTB/Challenges/Phreaky/WRITEUP.md",
+      "contentPath": "/content/HTB/Challenges/Phreaky/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Challenges/Phreaky",
+      "url": "/htb/challenges/phreaky",
+      "readingTime": {
+        "minutes": 4,
+        "words": 858,
+        "text": "4 min read"
+      }
+    },
+    {
+      "slug": "red-trails",
+      "title": "RedTrails",
+      "description": "Hack The Box challenge write-up for RedTrails.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "challenge",
+        "forensics"
+      ],
+      "category": "Challenges",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-challenges",
+        "name": "Challenges",
+        "directory": "Challenges",
+        "slug": "challenges",
+        "route": "/htb/challenges"
+      },
+      "type": "writeup",
+      "difficulty": "medium",
+      "featured": false,
+      "sourcePath": "content/HTB/Challenges/RedTrails/WRITEUP.md",
+      "contentPath": "/content/HTB/Challenges/RedTrails/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Challenges/RedTrails",
+      "url": "/htb/challenges/red-trails",
+      "readingTime": {
+        "minutes": 4,
+        "words": 722,
+        "text": "4 min read"
+      }
+    },
+    {
+      "slug": "rogue",
+      "title": "Rogue",
+      "description": "Hack The Box challenge write-up for Rogue.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "challenge",
+        "forensics"
+      ],
+      "category": "Challenges",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-challenges",
+        "name": "Challenges",
+        "directory": "Challenges",
+        "slug": "challenges",
+        "route": "/htb/challenges"
+      },
+      "type": "writeup",
+      "difficulty": "medium",
+      "featured": false,
+      "sourcePath": "content/HTB/Challenges/Rogue/WRITEUP.md",
+      "contentPath": "/content/HTB/Challenges/Rogue/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Challenges/Rogue",
+      "url": "/htb/challenges/rogue",
+      "readingTime": {
+        "minutes": 4,
+        "words": 707,
+        "text": "4 min read"
+      }
+    },
+    {
+      "slug": "seized",
+      "title": "Seized",
+      "description": "Hack The Box challenge write-up for Seized.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "challenge",
+        "forensics"
+      ],
+      "category": "Challenges",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-challenges",
+        "name": "Challenges",
+        "directory": "Challenges",
+        "slug": "challenges",
+        "route": "/htb/challenges"
+      },
+      "type": "writeup",
+      "difficulty": "medium",
+      "featured": false,
+      "sourcePath": "content/HTB/Challenges/Seized/WRITEUP.md",
+      "contentPath": "/content/HTB/Challenges/Seized/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Challenges/Seized",
+      "url": "/htb/challenges/seized",
+      "readingTime": {
+        "minutes": 3,
+        "words": 482,
+        "text": "3 min read"
+      }
+    },
+    {
+      "slug": "strike-back",
+      "title": "Strike Back",
+      "description": "Hack The Box challenge write-up for Strike Back.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "challenge",
+        "forensics"
+      ],
+      "category": "Challenges",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-challenges",
+        "name": "Challenges",
+        "directory": "Challenges",
+        "slug": "challenges",
+        "route": "/htb/challenges"
+      },
+      "type": "writeup",
+      "difficulty": "medium",
+      "featured": false,
+      "sourcePath": "content/HTB/Challenges/Strike Back/WRITEUP.md",
+      "contentPath": "/content/HTB/Challenges/Strike Back/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Challenges/Strike Back",
+      "url": "/htb/challenges/strike-back",
+      "readingTime": {
+        "minutes": 4,
+        "words": 671,
+        "text": "4 min read"
+      }
+    },
+    {
+      "slug": "suspicious-threat",
+      "title": "Suspicious Threat",
+      "description": "Hack The Box challenge write-up for Suspicious Threat.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "challenge",
+        "forensics"
+      ],
+      "category": "Challenges",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-challenges",
+        "name": "Challenges",
+        "directory": "Challenges",
+        "slug": "challenges",
+        "route": "/htb/challenges"
+      },
+      "type": "writeup",
+      "difficulty": "easy",
+      "featured": false,
+      "sourcePath": "content/HTB/Challenges/Suspicious Threat/WRITEUP.md",
+      "contentPath": "/content/HTB/Challenges/Suspicious Threat/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Challenges/Suspicious Threat",
+      "url": "/htb/challenges/suspicious-threat",
+      "readingTime": {
+        "minutes": 2,
+        "words": 429,
+        "text": "2 min read"
+      }
+    },
+    {
+      "slug": "the-art-of-capture",
+      "title": "The Art of Capture",
+      "description": "Hack The Box challenge write-up for The Art of Capture.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "challenge",
+        "forensics"
+      ],
+      "category": "Challenges",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-challenges",
+        "name": "Challenges",
+        "directory": "Challenges",
+        "slug": "challenges",
+        "route": "/htb/challenges"
+      },
+      "type": "writeup",
+      "difficulty": "hard",
+      "featured": false,
+      "sourcePath": "content/HTB/Challenges/The Art of capture/WRITEUP.md",
+      "contentPath": "/content/HTB/Challenges/The Art of capture/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Challenges/The Art of capture",
+      "url": "/htb/challenges/the-art-of-capture",
+      "readingTime": {
+        "minutes": 9,
+        "words": 1792,
+        "text": "9 min read"
+      }
+    },
+    {
+      "slug": "true-secrets",
+      "title": "TrueSecrets",
+      "description": "Hack The Box challenge write-up for TrueSecrets.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "challenge",
+        "forensics"
+      ],
+      "category": "Challenges",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-challenges",
+        "name": "Challenges",
+        "directory": "Challenges",
+        "slug": "challenges",
+        "route": "/htb/challenges"
+      },
+      "type": "writeup",
+      "difficulty": "easy",
+      "featured": false,
+      "sourcePath": "content/HTB/Challenges/TrueSecrets/WRITEUP.md",
+      "contentPath": "/content/HTB/Challenges/TrueSecrets/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Challenges/TrueSecrets",
+      "url": "/htb/challenges/true-secrets",
+      "readingTime": {
+        "minutes": 3,
+        "words": 533,
+        "text": "3 min read"
+      }
+    },
+    {
+      "slug": "job-applicant",
+      "title": "JobApplicant",
+      "description": "Hack The Box sherlock write-up for JobApplicant.",
+      "date": "2026-06-11",
+      "author": "Security Researcher",
+      "tags": [
+        "htb",
+        "sherlock",
+        "forensics"
+      ],
+      "category": "Sherlocks",
+      "collection": "htb",
+      "branch": {
+        "id": "htb",
+        "name": "HTB",
+        "directory": "HTB",
+        "slug": "htb",
+        "route": "/htb"
+      },
+      "subBranch": {
+        "id": "htb-sherlocks",
+        "name": "Sherlocks",
+        "directory": "Sherlocks",
+        "slug": "sherlocks",
+        "route": "/htb/sherlocks"
+      },
+      "type": "writeup",
+      "difficulty": "hard",
+      "featured": false,
+      "sourcePath": "content/HTB/Sherlocks/JobApplicant/WRITEUP.md",
+      "contentPath": "/content/HTB/Sherlocks/JobApplicant/WRITEUP.md",
+      "assetBasePath": "/content/HTB/Sherlocks/JobApplicant",
+      "url": "/htb/sherlocks/job-applicant",
+      "readingTime": {
+        "minutes": 16,
+        "words": 3395,
+        "text": "16 min read"
+      }
+    }
+  ]
+}
