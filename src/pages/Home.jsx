@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, Radio, Terminal } from 'lucide-react';
+import { ArrowRight, Clock, Radio, Terminal, UserRound } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import BlogList from '../components/BlogList.jsx';
@@ -51,6 +51,13 @@ export default function Home() {
             <p className="mt-2">"Fidelio."</p>
           </blockquote>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              to="/about"
+              className="vault-button-secondary focus:outline-none focus:ring-2 focus:ring-[var(--accent-soft)]"
+            >
+              About Me
+              <UserRound size={16} />
+            </Link>
             <a
               href="#branches"
               className="vault-button focus:outline-none focus:ring-2 focus:ring-[var(--accent-soft)]"

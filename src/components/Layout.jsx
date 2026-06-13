@@ -1,5 +1,5 @@
-import { Link, NavLink } from 'react-router-dom';
-import { Github, Linkedin, Menu, X } from 'lucide-react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Github, Linkedin, Mail, Menu, Phone, X } from 'lucide-react';
 import { useState } from 'react';
 import { useTheme } from '../hooks/useTheme.js';
 import { contentBranches } from '../lib/branches.js';
@@ -14,8 +14,10 @@ const navItems = contentBranches.map((branch) => ({
 export default function Layout({ children }) {
   const { isDark, toggleTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
   const githubUrl = import.meta.env.VITE_GITHUB_URL || 'https://github.com/hhoangsonnw';
   const linkedinUrl = import.meta.env.VITE_LINKEDIN_URL || 'https://www.linkedin.com/in/hoang-son-bui-81417b317/';
+  const hideFooter = location.pathname === '/about';
 
   return (
     <div className="relative min-h-screen overflow-hidden text-[var(--ink)]">
@@ -96,11 +98,23 @@ export default function Layout({ children }) {
 
       <div className="relative z-10">{children}</div>
 
-      <footer className="vault-muted relative z-10 mx-auto max-w-7xl px-4 py-10 text-sm sm:px-6 lg:px-8">
-        <div className="border-t border-[var(--line)] pt-6 font-mono">
-          <p>signal over noise | notes from the lab</p>
-        </div>
-      </footer>
+      {!hideFooter ? (
+        <footer className="vault-muted relative z-10 mx-auto max-w-7xl px-4 py-10 text-sm sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-4 border-t border-[var(--line)] pt-6 font-mono md:flex-row md:items-center md:justify-between">
+            <p>signal over noise | notes from the lab</p>
+            <address className="flex flex-col gap-2 not-italic sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
+              <a className="vault-link inline-flex items-center gap-2" href="mailto:hoangson30042006@gmail.com">
+                <Mail size={15} />
+                hoangson30042006@gmail.com
+              </a>
+              <a className="vault-link inline-flex items-center gap-2" href="tel:0868627278">
+                <Phone size={15} />
+                0868627278
+              </a>
+            </address>
+          </div>
+        </footer>
+      ) : null}
     </div>
   );
 }

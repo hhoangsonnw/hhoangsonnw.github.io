@@ -6,6 +6,7 @@ import { contentBranches } from './lib/branches.js';
 
 const BranchPage = lazy(() => import('./pages/BranchPage.jsx'));
 const Home = lazy(() => import('./pages/Home.jsx'));
+const About = lazy(() => import('./pages/About.jsx'));
 const NotFound = lazy(() => import('./pages/NotFound.jsx'));
 const Post = lazy(() => import('./pages/Post.jsx'));
 
@@ -26,6 +27,7 @@ export default function App() {
         <Suspense fallback={<RouteFallback />}>
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
             {contentBranches.map((branch) => (
               <Route key={branch.id} path={branch.slug} element={<BranchPage branchSlug={branch.slug} />} />
             ))}
