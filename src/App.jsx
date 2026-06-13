@@ -12,7 +12,7 @@ const Post = lazy(() => import('./pages/Post.jsx'));
 function RouteFallback() {
   return (
     <main className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-      <div className="terminal-panel rounded-lg p-6 font-mono text-sm text-slate-600 dark:text-slate-300">Loading route...</div>
+      <div className="terminal-panel vault-muted rounded-lg p-6 font-mono text-sm">Loading route...</div>
     </main>
   );
 }

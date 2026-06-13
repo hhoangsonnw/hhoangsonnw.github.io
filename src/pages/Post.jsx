@@ -49,7 +49,7 @@ export default function Post({ expectedBranchSlug, expectedSubBranchSlug }) {
   if (status === 'loading') {
     return (
       <PageTransition className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
-        <div className="terminal-panel rounded-lg p-6 font-mono text-sm text-slate-600 dark:text-slate-300">Loading post...</div>
+        <div className="terminal-panel vault-muted rounded-lg p-6 font-mono text-sm">Loading post...</div>
       </PageTransition>
     );
   }
@@ -59,9 +59,9 @@ export default function Post({ expectedBranchSlug, expectedSubBranchSlug }) {
       <PageTransition className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
         <Seo title="Post not found" />
         <div className="terminal-panel rounded-lg p-6">
-          <h1 className="font-mono text-2xl font-bold">Post not found</h1>
-          <p className="mt-3 text-slate-600 dark:text-slate-300">The content index does not include this slug.</p>
-          <Link className="mt-5 inline-flex rounded-md border border-emerald-400 px-3 py-2 font-mono text-sm text-emerald-700 dark:text-emerald-200" to="/">
+          <h1 className="vault-title text-3xl font-bold">Post not found</h1>
+          <p className="vault-muted mt-3">The content index does not include this slug.</p>
+          <Link className="vault-button mt-5" to="/">
             Back home
           </Link>
         </div>
@@ -76,13 +76,13 @@ export default function Post({ expectedBranchSlug, expectedSubBranchSlug }) {
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_18rem]">
         <div className="min-w-0">
           <header className="mb-8">
-            <Link to={post.subBranch?.route || post.branch?.route || '/'} className="font-mono text-sm text-cyan-700 transition hover:text-cyan-500 dark:text-cyan-300">
+            <Link to={post.subBranch?.route || post.branch?.route || '/'} className="vault-link font-mono text-sm">
               /{post.branch?.name || 'content'}{post.subBranch ? `/${post.subBranch.name}` : ''}
             </Link>
-            <h1 className="mt-4 font-mono text-3xl font-black text-slate-950 dark:text-white sm:text-5xl">{post.title}</h1>
-            <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">{post.description}</p>
+            <h1 className="vault-title mt-4 text-4xl font-black sm:text-6xl">{post.title}</h1>
+            <p className="vault-muted mt-4 max-w-3xl text-lg leading-8">{post.description}</p>
 
-            <div className="mt-5 flex flex-wrap gap-3 font-mono text-xs text-slate-500 dark:text-slate-400">
+            <div className="vault-meta mt-5 flex flex-wrap gap-3 text-xs">
               <span className="inline-flex items-center gap-2">
                 <Calendar size={14} />
                 {formatDate(post.date)}
@@ -99,7 +99,7 @@ export default function Post({ expectedBranchSlug, expectedSubBranchSlug }) {
 
             <div className="mt-5 flex flex-wrap gap-2">
               {(post.tags ?? []).map((tag) => (
-                <span key={tag} className="tag-chip border-cyan-400/30 bg-cyan-400/10 text-cyan-700 dark:text-cyan-100">
+                <span key={tag} className="tag-chip">
                   #{tag}
                 </span>
               ))}

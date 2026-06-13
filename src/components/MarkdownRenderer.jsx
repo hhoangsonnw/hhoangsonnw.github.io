@@ -27,10 +27,7 @@ function escapeHtml(value) {
 
 function InlineCode({ children, ...props }) {
   return (
-    <code
-      {...props}
-      className="rounded border border-slate-900/10 bg-slate-900/5 px-1.5 py-0.5 font-mono text-[0.9em] text-cyan-800 dark:border-cyan-400/20 dark:bg-cyan-400/10 dark:text-cyan-100"
-    >
+    <code {...props} className="font-mono text-[0.9em]">
       {children}
     </code>
   );
@@ -58,13 +55,13 @@ function FencedCodeBlock({ className = '', code }) {
   }
 
   return (
-    <div className="not-prose my-6 overflow-hidden rounded-md border border-slate-900/10 bg-slate-950 text-slate-100 dark:border-cyan-400/20">
-      <div className="flex items-center justify-between border-b border-white/10 bg-slate-900 px-4 py-2 font-mono text-xs text-slate-300">
+    <div className="vault-code not-prose my-6">
+      <div className="vault-code-header">
         <span>{language || 'text'}</span>
         <button
           type="button"
           onClick={copyCode}
-          className="inline-flex items-center gap-2 rounded border border-white/10 px-2 py-1 text-slate-200 transition hover:border-emerald-300 hover:text-emerald-200 focus:outline-none focus:ring-2 focus:ring-emerald-300/40"
+          className="vault-code-button focus:outline-none focus:ring-2 focus:ring-[var(--amber-soft)]"
         >
           {copied ? <Check size={14} /> : <Copy size={14} />}
           {copied ? 'Copied' : 'Copy'}
@@ -81,7 +78,7 @@ function PreBlock({ children }) {
   const child = Children.toArray(children).find((item) => isValidElement(item) && item.props?.children !== undefined);
 
   if (!child) {
-    return <pre className="overflow-x-auto rounded-md bg-slate-950 p-4 text-slate-100">{children}</pre>;
+    return <pre className="vault-code overflow-x-auto p-4">{children}</pre>;
   }
 
   return <FencedCodeBlock className={child.props.className || ''} code={String(child.props.children ?? '').replace(/\n$/, '')} />;
@@ -89,7 +86,7 @@ function PreBlock({ children }) {
 
 export default function MarkdownRenderer({ markdown, assetBasePath }) {
   return (
-    <article className="markdown-body prose prose-slate max-w-none dark:prose-invert prose-headings:scroll-mt-24 prose-headings:font-mono prose-a:text-cyan-700 dark:prose-a:text-cyan-300 prose-strong:text-slate-950 dark:prose-strong:text-white">
+    <article className="markdown-body prose max-w-none prose-headings:scroll-mt-24 prose-headings:font-display prose-a:text-[var(--accent-strong)] prose-strong:text-[var(--ink)]">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSlug]}
@@ -97,28 +94,29 @@ export default function MarkdownRenderer({ markdown, assetBasePath }) {
           code: InlineCode,
           pre: PreBlock,
           blockquote({ children }) {
+            // /impeccable critique: replace the stock side-tab quote block with a sealed note panel.
             return (
-              <blockquote className="border-l-4 border-emerald-400 bg-emerald-400/10 px-4 py-2 text-slate-700 dark:text-emerald-100">
+              <blockquote className="vault-quote my-6 text-base leading-7">
                 {children}
               </blockquote>
             );
           },
           table({ children }) {
             return (
-              <div className="not-prose my-6 overflow-hidden rounded-md border border-slate-900/10 dark:border-cyan-400/20">
+              <div className="vault-table-frame not-prose my-6">
                 <table className="w-full table-fixed border-collapse text-sm">{children}</table>
               </div>
             );
           },
           th({ children }) {
             return (
-              <th className="border-b border-slate-900/10 bg-slate-900/5 px-3 py-2 text-left font-semibold text-slate-800 dark:border-cyan-400/20 dark:bg-cyan-400/10 dark:text-cyan-100">
+              <th className="border-b border-[var(--line)] bg-[var(--surface-strong)] px-3 py-2 text-left font-semibold text-[var(--ink)]">
                 {children}
               </th>
             );
           },
           td({ children }) {
-            return <td className="break-words border-t border-slate-900/10 px-3 py-2 align-top dark:border-cyan-400/15">{children}</td>;
+            return <td className="break-words border-t border-[var(--line)] px-3 py-2 align-top">{children}</td>;
           },
           img({ src, alt }) {
             return (
@@ -126,7 +124,7 @@ export default function MarkdownRenderer({ markdown, assetBasePath }) {
                 src={resolveAsset(src, assetBasePath)}
                 alt={alt || ''}
                 loading="lazy"
-                className="rounded-lg border border-slate-900/10 shadow-glow dark:border-cyan-400/20"
+                className="rounded-lg border border-[var(--line)] shadow-glow"
               />
             );
           },

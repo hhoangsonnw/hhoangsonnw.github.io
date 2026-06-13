@@ -36,30 +36,31 @@ export default function BlogList({ posts, title = 'Write-ups', description }) {
   return (
     <section className="space-y-6">
       <div className="flex flex-col gap-2">
-        <h2 className="font-mono text-2xl font-bold text-slate-950 dark:text-white">{title}</h2>
-        {description ? <p className="max-w-3xl text-slate-600 dark:text-slate-300">{description}</p> : null}
+        <h2 className="vault-title text-3xl font-bold">{title}</h2>
+        {description ? <p className="vault-muted max-w-3xl">{description}</p> : null}
       </div>
 
       <div className="terminal-panel rounded-lg p-4">
+        {/* /impeccable craft: form controls are still native inputs, now styled as reusable vault controls. */}
         <div className="grid gap-3 lg:grid-cols-[1fr_auto]">
           <label className="relative block">
             <span className="sr-only">Search CTF write-ups</span>
-            <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+            <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[var(--ink-muted)]" size={18} />
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Search targets, exploits, tags..."
-              className="h-11 w-full rounded-md border border-slate-300/80 bg-white/80 pl-10 pr-3 font-mono text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-400/20 dark:border-cyan-400/25 dark:bg-slate-950/80 dark:text-emerald-50 dark:placeholder:text-slate-500"
+              className="vault-input pl-10 pr-3 font-mono text-sm"
             />
           </label>
 
           <label className="relative block">
             <span className="sr-only">Filter by difficulty</span>
-            <Filter className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+            <Filter className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[var(--ink-muted)]" size={18} />
             <select
               value={difficulty}
               onChange={(event) => setDifficulty(event.target.value)}
-              className="h-11 w-full rounded-md border border-slate-300/80 bg-white/80 pl-10 pr-8 font-mono text-sm text-slate-900 outline-none transition focus:border-cyan-500 focus:ring-2 focus:ring-cyan-400/20 dark:border-cyan-400/25 dark:bg-slate-950/80 dark:text-emerald-50 lg:w-44"
+              className="vault-input pl-10 pr-8 font-mono text-sm lg:w-44"
             >
               {difficulties.map((item) => (
                 <option key={item} value={item}>
@@ -78,11 +79,7 @@ export default function BlogList({ posts, title = 'Write-ups', description }) {
                 key={tag}
                 type="button"
                 onClick={() => toggleTag(tag)}
-                className={`tag-chip ${
-                  selected
-                    ? 'border-emerald-400 bg-emerald-400/15 text-emerald-700 dark:text-emerald-200'
-                    : 'border-slate-300/80 bg-white/70 text-slate-600 hover:border-cyan-400 hover:text-cyan-700 dark:border-cyan-400/20 dark:bg-slate-950/70 dark:text-slate-300 dark:hover:text-cyan-100'
-                }`}
+                className={`tag-chip ${selected ? 'tag-chip-active' : ''}`}
               >
                 <Tags size={13} />
                 <span className="ml-1">#{tag}</span>
@@ -103,7 +100,7 @@ export default function BlogList({ posts, title = 'Write-ups', description }) {
             className="terminal-panel cyber-border rounded-lg p-5"
           >
             <Link to={post.url} className="group block space-y-4">
-              <div className="flex flex-wrap items-center gap-2 font-mono text-xs text-slate-500 dark:text-slate-400">
+              <div className="vault-meta flex flex-wrap items-center gap-2 text-xs">
                 <span>{formatDate(post.date)}</span>
                 <span aria-hidden="true">/</span>
                 <span>{post.category}</span>
@@ -115,19 +112,19 @@ export default function BlogList({ posts, title = 'Write-ups', description }) {
                 ) : null}
               </div>
               <div>
-                <h3 className="font-mono text-xl font-semibold text-slate-950 transition group-hover:text-cyan-700 dark:text-white dark:group-hover:text-cyan-200">
+                <h3 className="vault-title text-2xl font-semibold transition group-hover:text-[var(--accent-strong)]">
                   {post.title}
                 </h3>
-                <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{post.description}</p>
+                <p className="vault-muted mt-2 line-clamp-3 text-sm leading-6">{post.description}</p>
               </div>
               <div className="flex flex-wrap gap-2">
                 {(post.tags ?? []).map((tag) => (
-                  <span key={tag} className="tag-chip border-slate-300/80 bg-slate-50/70 text-slate-600 dark:border-cyan-400/20 dark:bg-slate-950/70 dark:text-slate-300">
+                  <span key={tag} className="tag-chip">
                     #{tag}
                   </span>
                 ))}
               </div>
-              <div className="flex items-center gap-2 font-mono text-xs text-slate-500 dark:text-slate-400">
+              <div className="vault-meta flex items-center gap-2 text-xs">
                 <Clock size={14} />
                 <span>{post.readingTime?.text ?? '3 min read'}</span>
               </div>
@@ -137,7 +134,7 @@ export default function BlogList({ posts, title = 'Write-ups', description }) {
       </div>
 
       {filteredPosts.length === 0 ? (
-        <div className="terminal-panel rounded-lg p-6 font-mono text-sm text-slate-600 dark:text-slate-300">
+        <div className="terminal-panel vault-muted rounded-lg p-6 font-mono text-sm">
           No matching write-ups in the current index.
         </div>
       ) : null}

@@ -8,26 +8,27 @@ export default {
     extend: {
       colors: {
         terminal: {
-          50: '#ecfeff',
-          100: '#cffafe',
-          500: '#14f195',
-          700: '#08a66c',
-          950: '#020617',
+          50: '#f4f0e7',
+          100: '#e8dfcf',
+          500: '#2f8a68',
+          700: '#1f604f',
+          950: '#090d0c',
         },
         neon: {
-          cyan: '#22d3ee',
-          green: '#39ff88',
-          magenta: '#f472b6',
-          amber: '#fbbf24',
+          cyan: '#4fb6aa',
+          green: '#2f8a68',
+          magenta: '#a94b58',
+          amber: '#d5a253',
         },
       },
       boxShadow: {
-        glow: '0 0 36px rgba(34, 211, 238, 0.22)',
-        matrix: '0 0 28px rgba(57, 255, 136, 0.22)',
+        glow: '0 20px 50px rgba(9, 13, 12, 0.18)',
+        matrix: '0 0 0 1px rgba(213, 162, 83, 0.18), 0 18px 48px rgba(9, 13, 12, 0.26)',
       },
       fontFamily: {
-        mono: ['JetBrains Mono', 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'monospace'],
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['Iowan Old Style', 'Palatino', 'Charter', 'ui-serif', 'Georgia', 'serif'],
+        mono: ['SFMono-Regular', 'Menlo', 'Consolas', 'Liberation Mono', 'monospace'],
+        sans: ['Aptos', 'Segoe UI', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       keyframes: {
         scan: {

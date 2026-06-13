@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 
-const particleColors = ['rgba(57, 255, 136, 0.72)', 'rgba(34, 211, 238, 0.62)', 'rgba(244, 114, 182, 0.52)'];
+// /impeccable animate + colorize: background motion becomes a restrained signal map using the vault palette.
+const particleColors = ['rgba(47, 138, 104, 0.52)', 'rgba(213, 162, 83, 0.38)', 'rgba(169, 75, 88, 0.32)'];
 
 export default function ParticleNetwork() {
   const canvasRef = useRef(null);
@@ -22,13 +23,13 @@ export default function ParticleNetwork() {
       canvas.style.height = `${height}px`;
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
 
-      const count = Math.min(95, Math.max(38, Math.floor((width * height) / 26000)));
+      const count = Math.min(72, Math.max(28, Math.floor((width * height) / 34000)));
       particles = Array.from({ length: count }, (_, index) => ({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: (Math.random() - 0.5) * 0.32,
-        vy: (Math.random() - 0.5) * 0.32,
-        radius: Math.random() * 1.8 + 0.8,
+        vx: (Math.random() - 0.5) * 0.24,
+        vy: (Math.random() - 0.5) * 0.24,
+        radius: Math.random() * 1.45 + 0.65,
         color: particleColors[index % particleColors.length],
       }));
       draw();
@@ -60,7 +61,7 @@ export default function ParticleNetwork() {
             context.beginPath();
             context.moveTo(particle.x, particle.y);
             context.lineTo(other.x, other.y);
-            context.strokeStyle = `rgba(34, 211, 238, ${0.16 * (1 - distance / 130)})`;
+            context.strokeStyle = `rgba(47, 138, 104, ${0.14 * (1 - distance / 130)})`;
             context.lineWidth = 1;
             context.stroke();
           }
@@ -72,13 +73,15 @@ export default function ParticleNetwork() {
             context.beginPath();
             context.moveTo(particle.x, particle.y);
             context.lineTo(pointer.x, pointer.y);
-            context.strokeStyle = `rgba(57, 255, 136, ${0.2 * (1 - distanceToPointer / 180)})`;
+            context.strokeStyle = `rgba(213, 162, 83, ${0.18 * (1 - distanceToPointer / 180)})`;
             context.stroke();
           }
         }
       });
 
-      animationId = window.requestAnimationFrame(draw);
+      if (!prefersReducedMotion) {
+        animationId = window.requestAnimationFrame(draw);
+      }
     }
 
     function handlePointerMove(event) {
@@ -104,5 +107,5 @@ export default function ParticleNetwork() {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="pointer-events-none fixed inset-0 z-0 opacity-70 dark:opacity-80" aria-hidden="true" />;
+  return <canvas ref={canvasRef} className="pointer-events-none fixed inset-0 z-0 opacity-45 dark:opacity-55" aria-hidden="true" />;
 }

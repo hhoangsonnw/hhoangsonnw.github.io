@@ -18,30 +18,23 @@ export default function Layout({ children }) {
   const linkedinUrl = import.meta.env.VITE_LINKEDIN_URL || 'https://www.linkedin.com/in/hoang-son-bui-81417b317/';
 
   return (
-    <div className="relative min-h-screen overflow-hidden text-slate-900 dark:text-emerald-50">
+    <div className="relative min-h-screen overflow-hidden text-[var(--ink)]">
       <ParticleNetwork />
       <div className="matrix-grid pointer-events-none fixed inset-x-0 top-0 z-0 h-80 opacity-50" aria-hidden="true" />
 
-      <header className="sticky top-0 z-30 border-b border-slate-900/10 bg-slate-50/78 backdrop-blur-xl dark:border-cyan-400/15 dark:bg-slate-950/72">
+      <header className="vault-header sticky top-0 z-30">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8" aria-label="Primary">
           <Link to="/" className="group flex items-center gap-3" onClick={() => setIsOpen(false)}>
-            <span className="font-mono text-base font-semibold uppercase text-slate-800 dark:text-emerald-100">
-              HHOANGSONNW
-            </span>
+            <span className="vault-brand uppercase">HHOANGSONNW</span>
           </Link>
 
           <div className="hidden items-center gap-2 md:flex">
+            {/* /impeccable harden: active and idle nav states now share tokenized classes across desktop and mobile. */}
             {navItems.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
-                className={({ isActive }) =>
-                  `terminal-link ${
-                    isActive
-                      ? 'border border-emerald-400/50 bg-emerald-400/10 text-emerald-700 dark:text-emerald-200'
-                      : 'text-slate-600 hover:bg-slate-900/5 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-cyan-400/10 dark:hover:text-cyan-100'
-                  }`
-                }
+                className={({ isActive }) => `terminal-link ${isActive ? 'terminal-link-active' : ''}`}
               >
                 /{item.label}
               </NavLink>
@@ -50,7 +43,7 @@ export default function Layout({ children }) {
               href={githubUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-10 w-10 items-center justify-center rounded border border-slate-300/60 bg-white/70 text-slate-700 transition hover:border-slate-900 hover:text-slate-950 dark:border-cyan-400/30 dark:bg-slate-950/70 dark:text-emerald-200 dark:hover:border-emerald-300"
+              className="vault-icon-button"
               aria-label="GitHub profile"
               title="GitHub profile"
             >
@@ -60,7 +53,7 @@ export default function Layout({ children }) {
               href={linkedinUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-10 w-10 items-center justify-center rounded border border-slate-300/60 bg-white/70 text-slate-700 transition hover:border-sky-500 hover:text-sky-700 dark:border-cyan-400/30 dark:bg-slate-950/70 dark:text-emerald-200 dark:hover:border-sky-300 dark:hover:text-sky-200"
+              className="vault-icon-button"
               aria-label="LinkedIn profile"
               title="LinkedIn profile"
             >
@@ -74,7 +67,7 @@ export default function Layout({ children }) {
             <button
               type="button"
               onClick={() => setIsOpen((current) => !current)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded border border-slate-300/70 bg-white/70 text-slate-700 transition dark:border-cyan-400/30 dark:bg-slate-950/70 dark:text-emerald-200"
+              className="vault-icon-button"
               aria-label="Toggle navigation"
               aria-expanded={isOpen}
             >
@@ -84,20 +77,14 @@ export default function Layout({ children }) {
         </nav>
 
         {isOpen ? (
-          <div className="border-t border-slate-900/10 bg-slate-50/94 px-4 py-3 backdrop-blur-xl dark:border-cyan-400/15 dark:bg-slate-950/94 md:hidden">
+          <div className="border-t border-[var(--line)] bg-[var(--surface)] px-4 py-3 backdrop-blur-xl md:hidden">
             <div className="mx-auto flex max-w-7xl flex-col gap-2">
               {navItems.map((item) => (
                 <NavLink
                   key={item.to}
                   to={item.to}
                   onClick={() => setIsOpen(false)}
-                  className={({ isActive }) =>
-                    `terminal-link ${
-                      isActive
-                        ? 'border border-emerald-400/50 bg-emerald-400/10 text-emerald-700 dark:text-emerald-200'
-                        : 'text-slate-600 hover:bg-slate-900/5 hover:text-slate-950 dark:text-slate-300 dark:hover:bg-cyan-400/10 dark:hover:text-cyan-100'
-                    }`
-                  }
+                  className={({ isActive }) => `terminal-link ${isActive ? 'terminal-link-active' : ''}`}
                 >
                   /{item.label}
                 </NavLink>
@@ -109,8 +96,8 @@ export default function Layout({ children }) {
 
       <div className="relative z-10">{children}</div>
 
-      <footer className="relative z-10 mx-auto max-w-7xl px-4 py-10 text-sm text-slate-500 dark:text-slate-400 sm:px-6 lg:px-8">
-        <div className="border-t border-slate-900/10 pt-6 font-mono dark:border-cyan-400/15">
+      <footer className="vault-muted relative z-10 mx-auto max-w-7xl px-4 py-10 text-sm sm:px-6 lg:px-8">
+        <div className="border-t border-[var(--line)] pt-6 font-mono">
           <p>signal over noise | notes from the lab</p>
         </div>
       </footer>

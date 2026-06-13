@@ -37,7 +37,7 @@ export default function BranchPage({ branchSlug, subBranchSlug }) {
     return (
       <PageTransition className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
         <Seo title="Branch not found" />
-        <div className="terminal-panel rounded-lg p-6 font-mono text-sm text-slate-600 dark:text-slate-300">Branch not found.</div>
+        <div className="terminal-panel vault-muted rounded-lg p-6 font-mono text-sm">Branch not found.</div>
       </PageTransition>
     );
   }
@@ -50,20 +50,20 @@ export default function BranchPage({ branchSlug, subBranchSlug }) {
         <section className="mb-8 grid gap-4 md:grid-cols-2">
           {branch.subBranches.map((item) => (
             <Link key={item.id} to={item.route} className="terminal-panel cyber-border rounded-lg p-5 transition hover:-translate-y-0.5 hover:shadow-glow">
-              <div className="font-mono text-xl font-bold text-slate-950 dark:text-white">{item.name}</div>
-              <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">{item.description}</p>
-              <div className="mt-4 font-mono text-xs text-cyan-700 dark:text-cyan-300">{posts.filter((post) => post.subBranch?.slug === item.slug).length} entries</div>
+              <div className="vault-title text-2xl font-bold">{item.name}</div>
+              <p className="vault-muted mt-3 text-sm leading-6">{item.description}</p>
+              <div className="vault-meta mt-4 text-xs">{posts.filter((post) => post.subBranch?.slug === item.slug).length} entries</div>
             </Link>
           ))}
         </section>
       ) : null}
 
       {status === 'loading' ? (
-        <div className="terminal-panel rounded-lg p-6 font-mono text-sm text-slate-600 dark:text-slate-300">Loading {pageTitle} content...</div>
+        <div className="terminal-panel vault-muted rounded-lg p-6 font-mono text-sm">Loading {pageTitle} content...</div>
       ) : null}
 
       {status === 'error' ? (
-        <div className="terminal-panel rounded-lg border-red-400/40 p-6 font-mono text-sm text-red-700 dark:text-red-200">
+        <div className="terminal-panel rounded-lg border-[var(--seal)] p-6 font-mono text-sm text-[var(--seal)]">
           Content manifest is unavailable. Run npm run content:sync.
         </div>
       ) : null}
