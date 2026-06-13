@@ -3,117 +3,117 @@
   <channel>
     <title>HHOANGSONNW</title>
     <description>Personal cybersecurity portfolio with CTF write-ups, research notes, and reproducible security labs.</description>
-    <link>https://hhoangsonnw.github.io</link>
-    <lastBuildDate>Sat, 13 Jun 2026 08:28:00 GMT</lastBuildDate>
+    <link>https://example.com</link>
+    <lastBuildDate>Sat, 13 Jun 2026 08:38:51 GMT</lastBuildDate>
     <item>
       <title>SpottedInTheWild</title>
       <description>Reconstruct an attack timeline by analyzing disk images, event logs, and malicious scripts to identify initial access, persistence, and data exfiltration techniques.</description>
-      <link>https://hhoangsonnw.github.io/cyberdefenders/spotted-in-the-wild</link>
-      <guid>https://hhoangsonnw.github.io/cyberdefenders/spotted-in-the-wild</guid>
+      <link>https://example.com/cyberdefenders/spotted-in-the-wild</link>
+      <guid>https://example.com/cyberdefenders/spotted-in-the-wild</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>forensics</category><category>incident-response</category><category>malware</category><category>windows</category><category>winrar</category>
     </item>
     <item>
       <title>BlueSky Ransomware</title>
       <description>Reconstruct a BlueSky ransomware attack by analyzing network traffic, decoding PowerShell scripts, and examining persistence mechanisms to identify attacker tactics and IOCs.</description>
-      <link>https://hhoangsonnw.github.io/cyberdefenders/bluesky-ransomware</link>
-      <guid>https://hhoangsonnw.github.io/cyberdefenders/bluesky-ransomware</guid>
+      <link>https://example.com/cyberdefenders/bluesky-ransomware</link>
+      <guid>https://example.com/cyberdefenders/bluesky-ransomware</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>forensics</category><category>ransomware</category><category>malware</category><category>windows</category><category>sql-server</category>
     </item>
     <item>
       <title>Data Siege</title>
       <description>Hack The Box challenge write-up for Data Siege.</description>
-      <link>https://hhoangsonnw.github.io/htb/challenges/data-siege</link>
-      <guid>https://hhoangsonnw.github.io/htb/challenges/data-siege</guid>
+      <link>https://example.com/htb/challenges/data-siege</link>
+      <guid>https://example.com/htb/challenges/data-siege</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>challenge</category><category>forensics</category>
     </item>
     <item>
       <title>Deadly Arthropod</title>
       <description>Hack The Box challenge write-up for Deadly Arthropod.</description>
-      <link>https://hhoangsonnw.github.io/htb/challenges/deadly-athropod</link>
-      <guid>https://hhoangsonnw.github.io/htb/challenges/deadly-athropod</guid>
+      <link>https://example.com/htb/challenges/deadly-athropod</link>
+      <guid>https://example.com/htb/challenges/deadly-athropod</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>challenge</category><category>forensics</category>
     </item>
     <item>
       <title>Interstellar C2</title>
       <description>Hack The Box challenge write-up for Interstellar C2.</description>
-      <link>https://hhoangsonnw.github.io/htb/challenges/interstellar-c2</link>
-      <guid>https://hhoangsonnw.github.io/htb/challenges/interstellar-c2</guid>
+      <link>https://example.com/htb/challenges/interstellar-c2</link>
+      <guid>https://example.com/htb/challenges/interstellar-c2</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>challenge</category><category>forensics</category>
     </item>
     <item>
       <title>Phreaky</title>
       <description>Hack The Box challenge write-up for Phreaky.</description>
-      <link>https://hhoangsonnw.github.io/htb/challenges/phreaky</link>
-      <guid>https://hhoangsonnw.github.io/htb/challenges/phreaky</guid>
+      <link>https://example.com/htb/challenges/phreaky</link>
+      <guid>https://example.com/htb/challenges/phreaky</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>challenge</category><category>forensics</category>
     </item>
     <item>
       <title>RedTrails</title>
       <description>Hack The Box challenge write-up for RedTrails.</description>
-      <link>https://hhoangsonnw.github.io/htb/challenges/red-trails</link>
-      <guid>https://hhoangsonnw.github.io/htb/challenges/red-trails</guid>
+      <link>https://example.com/htb/challenges/red-trails</link>
+      <guid>https://example.com/htb/challenges/red-trails</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>challenge</category><category>forensics</category>
     </item>
     <item>
       <title>Rogue</title>
       <description>Hack The Box challenge write-up for Rogue.</description>
-      <link>https://hhoangsonnw.github.io/htb/challenges/rogue</link>
-      <guid>https://hhoangsonnw.github.io/htb/challenges/rogue</guid>
+      <link>https://example.com/htb/challenges/rogue</link>
+      <guid>https://example.com/htb/challenges/rogue</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>challenge</category><category>forensics</category>
     </item>
     <item>
       <title>Seized</title>
       <description>Hack The Box challenge write-up for Seized.</description>
-      <link>https://hhoangsonnw.github.io/htb/challenges/seized</link>
-      <guid>https://hhoangsonnw.github.io/htb/challenges/seized</guid>
+      <link>https://example.com/htb/challenges/seized</link>
+      <guid>https://example.com/htb/challenges/seized</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>challenge</category><category>forensics</category>
     </item>
     <item>
       <title>Strike Back</title>
       <description>Hack The Box challenge write-up for Strike Back.</description>
-      <link>https://hhoangsonnw.github.io/htb/challenges/strike-back</link>
-      <guid>https://hhoangsonnw.github.io/htb/challenges/strike-back</guid>
+      <link>https://example.com/htb/challenges/strike-back</link>
+      <guid>https://example.com/htb/challenges/strike-back</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>challenge</category><category>forensics</category>
     </item>
     <item>
       <title>Suspicious Threat</title>
       <description>Hack The Box challenge write-up for Suspicious Threat.</description>
-      <link>https://hhoangsonnw.github.io/htb/challenges/suspicious-threat</link>
-      <guid>https://hhoangsonnw.github.io/htb/challenges/suspicious-threat</guid>
+      <link>https://example.com/htb/challenges/suspicious-threat</link>
+      <guid>https://example.com/htb/challenges/suspicious-threat</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>challenge</category><category>forensics</category>
     </item>
     <item>
       <title>The Art of Capture</title>
       <description>Hack The Box challenge write-up for The Art of Capture.</description>
-      <link>https://hhoangsonnw.github.io/htb/challenges/the-art-of-capture</link>
-      <guid>https://hhoangsonnw.github.io/htb/challenges/the-art-of-capture</guid>
+      <link>https://example.com/htb/challenges/the-art-of-capture</link>
+      <guid>https://example.com/htb/challenges/the-art-of-capture</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>challenge</category><category>forensics</category>
     </item>
     <item>
       <title>TrueSecrets</title>
       <description>Hack The Box challenge write-up for TrueSecrets.</description>
-      <link>https://hhoangsonnw.github.io/htb/challenges/true-secrets</link>
-      <guid>https://hhoangsonnw.github.io/htb/challenges/true-secrets</guid>
+      <link>https://example.com/htb/challenges/true-secrets</link>
+      <guid>https://example.com/htb/challenges/true-secrets</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>challenge</category><category>forensics</category>
     </item>
     <item>
       <title>JobApplicant</title>
       <description>Hack The Box sherlock write-up for JobApplicant.</description>
-      <link>https://hhoangsonnw.github.io/htb/sherlocks/job-applicant</link>
-      <guid>https://hhoangsonnw.github.io/htb/sherlocks/job-applicant</guid>
+      <link>https://example.com/htb/sherlocks/job-applicant</link>
+      <guid>https://example.com/htb/sherlocks/job-applicant</guid>
       <pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate>
       <category>htb</category><category>sherlock</category><category>forensics</category>
     </item>
