@@ -4,7 +4,15 @@
     <title>HHOANGSONNW</title>
     <description>Personal cybersecurity portfolio with CTF write-ups, research notes, and reproducible security labs.</description>
     <link>https://example.com</link>
-    <lastBuildDate>Sat, 13 Jun 2026 16:08:09 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jun 2026 08:36:11 GMT</lastBuildDate>
+    <item>
+      <title>BankingTroubles</title>
+      <description>Evaluate a memory image using Volatility and forensic tools to reconstruct the attack chain initiated by a malicious PDF with JavaScript.</description>
+      <link>https://example.com/cyberdefenders/banking-troubles</link>
+      <guid>https://example.com/cyberdefenders/banking-troubles</guid>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
+      <category>initial-access</category><category>execution</category><category>defense-evasion</category><category>command-and-control</category><category>impact</category><category>pdf-tools</category><category>malfind</category><category>libemu</category><category>volatility</category><category>strings</category><category>foremost</category><category>hexdump</category><category>firebug</category><category>objdump</category>
+    </item>
     <item>
       <title>SpottedInTheWild</title>
       <description>Reconstruct an attack timeline by analyzing disk images, event logs, and malicious scripts to identify initial access, persistence, and data exfiltration techniques.</description>

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T16:08:09.510Z",
+  "generatedAt": "2026-06-15T08:36:11.928Z",
   "site": {
     "title": "HHOANGSONNW",
     "description": "Personal cybersecurity portfolio with CTF write-ups, research notes, and reproducible security labs.",
@@ -50,6 +50,50 @@
     }
   ],
   "posts": [
+    {
+      "slug": "banking-troubles",
+      "title": "BankingTroubles",
+      "description": "Evaluate a memory image using Volatility and forensic tools to reconstruct the attack chain initiated by a malicious PDF with JavaScript.",
+      "date": "2026-06-15",
+      "author": "Security Researcher",
+      "tags": [
+        "initial-access",
+        "execution",
+        "defense-evasion",
+        "command-and-control",
+        "impact",
+        "pdf-tools",
+        "malfind",
+        "libemu",
+        "volatility",
+        "strings",
+        "foremost",
+        "hexdump",
+        "firebug",
+        "objdump"
+      ],
+      "category": "forensics",
+      "collection": "cyberdefenders",
+      "branch": {
+        "id": "cyberdefenders",
+        "name": "CyberDefenders",
+        "directory": "CyberDefenders",
+        "slug": "cyberdefenders",
+        "route": "/cyberdefenders"
+      },
+      "type": "writeup",
+      "difficulty": "hard",
+      "featured": false,
+      "sourcePath": "content/CyberDefenders/BankingTroubles/WRITEUP.md",
+      "contentPath": "/content/CyberDefenders/BankingTroubles/WRITEUP.md",
+      "assetBasePath": "/content/CyberDefenders/BankingTroubles",
+      "url": "/cyberdefenders/banking-troubles",
+      "readingTime": {
+        "minutes": 14,
+        "words": 3073,
+        "text": "14 min read"
+      }
+    },
     {
       "slug": "spotted-in-the-wild",
       "title": "SpottedInTheWild",
